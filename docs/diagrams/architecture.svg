@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 420">
+  <defs>
+    <linearGradient id="ml1" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" style="stop-color:#1565c0"/><stop offset="100%" style="stop-color:#42a5f5"/></linearGradient>
+    <linearGradient id="ml2" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" style="stop-color:#6a1b9a"/><stop offset="100%" style="stop-color:#ab47bc"/></linearGradient>
+    <linearGradient id="ml3" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" style="stop-color:#e65100"/><stop offset="100%" style="stop-color:#ff9800"/></linearGradient>
+    <linearGradient id="ml4" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" style="stop-color:#2e7d32"/><stop offset="100%" style="stop-color:#66bb6a"/></linearGradient>
+    <linearGradient id="ml5" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" style="stop-color:#c62828"/><stop offset="100%" style="stop-color:#ef5350"/></linearGradient>
+    <filter id="s"><feDropShadow dx="2" dy="2" stdDeviation="2" flood-opacity="0.15"/></filter>
+    <marker id="arr" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0,10 3.5,0 7" fill="#555"/></marker>
+  </defs>
+  <style>
+    @keyframes flow{0%{stroke-dashoffset:20}100%{stroke-dashoffset:0}}
+    @keyframes fadeIn{0%{opacity:0;transform:translateY(8px)}100%{opacity:1;transform:translateY(0)}}
+    @keyframes spin{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
+    .flow{stroke-dasharray:10 10;animation:flow 1s linear infinite}
+    .s1{animation:fadeIn 0.4s ease 0.1s both}.s2{animation:fadeIn 0.4s ease 0.25s both}
+    .s3{animation:fadeIn 0.4s ease 0.4s both}.s4{animation:fadeIn 0.4s ease 0.55s both}
+    .s5{animation:fadeIn 0.4s ease 0.7s both}.s6{animation:fadeIn 0.4s ease 0.85s both}
+  </style>
+  <text x="450" y="30" text-anchor="middle" font-family="Arial" font-size="20" font-weight="bold" fill="#333">ML Pipeline — Train → Deploy → Monitor</text>
+  <!-- Data -->
+  <g class="s1"><rect x="20" y="140" width="110" height="70" rx="10" fill="url(#ml1)" filter="url(#s)"/><text x="75" y="172" text-anchor="middle" font-family="Arial" font-size="12" fill="white" font-weight="bold">Data</text><text x="75" y="192" text-anchor="middle" font-family="Arial" font-size="9" fill="#bbdefb">Ingest + Clean</text></g>
+  <!-- Features -->
+  <g class="s2"><rect x="165" y="140" width="110" height="70" rx="10" fill="url(#ml2)" filter="url(#s)"/><text x="220" y="172" text-anchor="middle" font-family="Arial" font-size="12" fill="white" font-weight="bold">Features</text><text x="220" y="192" text-anchor="middle" font-family="Arial" font-size="9" fill="#e1bee7">Store + Version</text></g>
+  <!-- Train -->
+  <g class="s3"><rect x="310" y="140" width="110" height="70" rx="10" fill="url(#ml3)" filter="url(#s)"/><text x="365" y="172" text-anchor="middle" font-family="Arial" font-size="12" fill="white" font-weight="bold">Train</text><text x="365" y="192" text-anchor="middle" font-family="Arial" font-size="9" fill="#ffe0b2">Hyperparameter</text></g>
+  <!-- Evaluate -->
+  <g class="s4"><rect x="455" y="140" width="110" height="70" rx="10" fill="#37474f" filter="url(#s)"/><text x="510" y="172" text-anchor="middle" font-family="Arial" font-size="12" fill="#80cbc4" font-weight="bold">Evaluate</text><text x="510" y="192" text-anchor="middle" font-family="Arial" font-size="9" fill="#b0bec5">A/B Test</text></g>
+  <!-- Deploy -->
+  <g class="s5"><rect x="600" y="140" width="110" height="70" rx="10" fill="url(#ml4)" filter="url(#s)"/><text x="655" y="172" text-anchor="middle" font-family="Arial" font-size="12" fill="white" font-weight="bold">Deploy</text><text x="655" y="192" text-anchor="middle" font-family="Arial" font-size="9" fill="#c8e6c9">ONNX Edge</text></g>
+  <!-- Monitor -->
+  <g class="s6"><rect x="745" y="140" width="120" height="70" rx="10" fill="url(#ml5)" filter="url(#s)"/><text x="805" y="172" text-anchor="middle" font-family="Arial" font-size="12" fill="white" font-weight="bold">Monitor</text><text x="805" y="192" text-anchor="middle" font-family="Arial" font-size="9" fill="#ffcdd2">Drift Detect</text></g>
+  <!-- Arrows -->
+  <line x1="130" y1="175" x2="160" y2="175" stroke="#555" stroke-width="2" class="flow" marker-end="url(#arr)"/>
+  <line x1="275" y1="175" x2="305" y2="175" stroke="#555" stroke-width="2" class="flow" marker-end="url(#arr)"/>
+  <line x1="420" y1="175" x2="450" y2="175" stroke="#555" stroke-width="2" class="flow" marker-end="url(#arr)"/>
+  <line x1="565" y1="175" x2="595" y2="175" stroke="#555" stroke-width="2" class="flow" marker-end="url(#arr)"/>
+  <line x1="710" y1="175" x2="740" y2="175" stroke="#555" stroke-width="2" class="flow" marker-end="url(#arr)"/>
+  <!-- Feedback loop -->
+  <path d="M805,215 L805,280 L75,280 L75,215" fill="none" stroke="#c62828" stroke-width="1.5" stroke-dasharray="8 4" class="flow" marker-end="url(#arr)"/>
+  <text x="450" y="298" text-anchor="middle" font-family="Arial" font-size="11" fill="#c62828" font-weight="bold">Feedback Loop — Retrain on Drift</text>
+  <!-- Parallel -->
+  <rect x="180" y="340" width="540" height="40" rx="20" fill="#f3e5f5" stroke="#9c27b0" stroke-width="1.5"/>
+  <text x="450" y="365" text-anchor="middle" font-family="Arial" font-size="12" fill="#6a1b9a" font-weight="bold">3 models trained concurrently — best promoted to production</text>
+</svg>
